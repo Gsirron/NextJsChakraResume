@@ -18,7 +18,6 @@ const Layout = ({ children }: LayoutProps) => {
       maxW="7xl"
       bg={useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK)}
       margin="0 auto"
-      maxWidth={800}
       transition="0.5s ease-out"
     >
       <Box margin="8">
