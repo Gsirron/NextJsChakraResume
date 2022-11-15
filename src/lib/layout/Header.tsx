@@ -17,14 +17,24 @@ const NavBarLinks = [
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex h="10em" width="full" justifyContent="space-between">
-      <IconButton
-        variant="outline"
-        icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={"1.5em"} />}
-        aria-label="Open Menu"
-        display={{ md: "none" }}
-        onClick={isOpen ? onClose : onOpen}
-      />
+    <Flex
+      h="5em"
+      width="full"
+      justifyContent="space-between"
+      // bgGradient="linear(to-r, blue.800, gray.800,blue.900)"
+      bgGradient="radial( blue.800,gray.700)"
+      py="1em"
+      px={["1em", "2em"]}
+    >
+      <Box justifyContent="center">
+        <IconButton
+          variant="outline"
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize="1.5em" />}
+          aria-label="Open Menu"
+          display={{ md: "none" }}
+          onClick={isOpen ? onClose : onOpen}
+        />
+      </Box>
 
       <IconButton variant="link" aria-label="home" />
       <HStack spacing="2em" display={{ base: "none", md: "flex" }}>
@@ -34,7 +44,7 @@ const Header = () => {
           </Link>
         ))}
       </HStack>
-      <Box>{/* <ThemeToggle /> */}</Box>
+      {/* <Box><ThemeToggle /></Box> */}
     </Flex>
   );
 };

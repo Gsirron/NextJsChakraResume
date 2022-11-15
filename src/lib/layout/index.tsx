@@ -14,14 +14,14 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <Box
-      as={Container}
-      maxW="7xl"
+      // as={Container}
+      w={["full"]}
       bg={useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK)}
       margin="0 auto"
       transition="0.5s ease-out"
     >
+      <Header />
       <Box margin="8">
-        <Header />
         <Box as="main" marginY={22}>
           {children}
         </Box>
