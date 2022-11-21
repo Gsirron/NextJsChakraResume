@@ -2,6 +2,21 @@
   "extends": [
     "sznm/react",
     "plugin:react/jsx-runtime",
-    "plugin:@next/next/recommended"
-  ]
+    "plugin:@next/next/recommended",
+    "plugin:import/typescript"
+    // "airbnb",
+    // "airbnb-typescript"
+  ],
+  "rules": {
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
 }
