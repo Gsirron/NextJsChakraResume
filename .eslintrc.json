@@ -10,7 +10,7 @@
   "rules": {
     "import/extensions": [
       "error",
-      "ignorePackages",
+      "never",
       {
         "js": "never",
         "jsx": "never",
