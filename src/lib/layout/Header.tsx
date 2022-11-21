@@ -22,7 +22,7 @@ const Header = () => {
       h="5em"
       width="full"
       bgGradient="radial( blue.800,gray.700)"
-      py="1em"
+      py={[0, 0, "1em"]}
       px={["1em", "2em"]}
       justifyContent="center"
     >
@@ -33,7 +33,7 @@ const Header = () => {
         // bgGradient="linear(to-r, blue.800, gray.800,blue.900)"
         maxW="7xl"
       >
-        <Box justifyContent="center">
+        <Box justifyContent="center" pb="1em">
           <IconButton
             variant="outline"
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize="1.5em" />}
