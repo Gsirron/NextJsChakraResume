@@ -19,13 +19,13 @@ const SocialButton = (props: TSocialButton) => {
         <IconButton
           aria-label={label}
           variant="ghost"
-          size="lg"
+          w="1px"
+          size={["lg", "lg"]}
           icon={TempIcon}
           _hover={{
             bg: "blue.500",
             color: "white",
           }}
-          isRound
         />
       </a>
     </Link>

@@ -12,6 +12,7 @@ import {
   Image,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
+
 import resumeData from "../../../data/ResumeData";
 
 // import CTASection from "lib/components/samples/CTASection";

@@ -4,14 +4,18 @@ import SocialButton from "./SocialButton";
 
 import ResumeData from "@/data/ResumeData";
 
-const SocialMedia = (BtnSize: string) => {
-  const size = BtnSize;
+type SocialMediaProps = {
+  BtnSize: string;
+};
+
+const SocialMedia = (props: SocialMediaProps) => {
+  const { BtnSize } = props;
   const SocialData = ResumeData.social;
 
   return (
-    <Stack spacing={{ base: 4, md: 8, lg: 20 }} direction={"row"}>
+    <Stack spacing={[2, "0.5em"]} direction={"row"}>
       {SocialData.map((buttoninfo) => (
-        <SocialButton key={buttoninfo.label} size={size} {...buttoninfo} />
+        <SocialButton key={buttoninfo.label} size={BtnSize} {...buttoninfo} />
       ))}
     </Stack>
   );
