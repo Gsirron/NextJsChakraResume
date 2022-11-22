@@ -1,4 +1,4 @@
-import { Box, Container, useColorModeValue } from "@chakra-ui/react";
+import { Box, useColorModeValue } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
 import ConfettiBg from "./backgrounds/ConfettiBg";
