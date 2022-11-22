@@ -49,7 +49,7 @@ const Home = () => {
             <Heading
               lineHeight={1.1}
               fontWeight={600}
-              fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+              fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
             >
               <Text color={textColor}>Hi I'm</Text>
               <Text
@@ -69,7 +69,7 @@ const Home = () => {
                 {Name}
               </Text>
               <br />
-              <Text color={textColor}>{Occupation}</Text>
+              <Text color={textColor}>{`And I'm a\n${Occupation}`}</Text>
             </Heading>
             <Text color="gray.300" fontSize={["md", "lg", "xl"]}>
               {Bio}
