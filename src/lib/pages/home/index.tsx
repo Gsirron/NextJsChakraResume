@@ -29,20 +29,18 @@ const Home = () => {
   return (
     <Stack
       direction={["column", "row"]}
-      spacing={["2em", "3em"]}
+      spacing={["1em", "2em"]}
       alignItems="center"
       justifyContent="center"
       minHeight="70vh"
-      gap="1em"
-      py="1em"
       w="full"
     >
       <NextSeo title="Home" />
       <Container maxW="7xl">
         <Stack
           align="center"
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}
+          spacing={["1em", "2em", "3em"]}
+          py={["1em", "2em", "3em"]}
           direction={{ base: "column", md: "row" }}
         >
           <Stack flex={1} spacing={{ base: 5, md: 10 }}>
@@ -51,7 +49,7 @@ const Home = () => {
               fontWeight={600}
               fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
             >
-              <Text color={textColor}>Hi I'm</Text>
+              <Text color={textColor}>{`Hi I'm`}</Text>
               <Text
                 as="span"
                 position="relative"
@@ -69,7 +67,8 @@ const Home = () => {
                 {Name}
               </Text>
               <br />
-              <Text color={textColor}>{`And I'm a\n${Occupation}`}</Text>
+              <Text color={textColor}>{`And I'm a \n
+              ${Occupation}`}</Text>
             </Heading>
             <Text color="gray.300" fontSize={["md", "lg", "xl"]}>
               {Bio}

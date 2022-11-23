@@ -5,7 +5,7 @@ type ProjectsProps = {};
 
 const Projects = (props: ProjectsProps) => {
   return (
-    <Box>
+    <Box minH="70vh">
       <Stack>
         <Heading>Projects</Heading>
       </Stack>

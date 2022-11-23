@@ -12,7 +12,7 @@ import {
 import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const NavBarLinks = [
-  { name: "Work", link: "work" },
+  { name: "Projects", link: "projects" },
   { name: "About", link: "about" },
   { name: "Contact", link: "contact" },
 ];
