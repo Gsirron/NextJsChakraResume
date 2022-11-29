@@ -75,9 +75,11 @@ const Home = () => {
               spacing={{ base: "1em", sm: "1.5em" }}
               direction={{ base: "column", sm: "row" }}
               justifyContent="center"
+              // justifyItems={"center"}
             >
               <SocialMedia BtnSize={"2em"} />
               <Button
+                // maxW={"20rem"}
                 rounded="full"
                 size="lg"
                 fontWeight="normal"

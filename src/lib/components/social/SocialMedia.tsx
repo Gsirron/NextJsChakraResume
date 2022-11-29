@@ -13,7 +13,11 @@ const SocialMedia = (props: SocialMediaProps) => {
   const SocialData = ResumeData.social;
 
   return (
-    <Stack spacing={["2px", "0.5em"]} direction={"row"}>
+    <Stack
+      justifyContent={{ base: "center", md: "initial" }}
+      spacing={["2px", "0.5em"]}
+      direction={"row"}
+    >
       {SocialData.map((buttoninfo) => (
         <SocialButton key={buttoninfo.label} size={BtnSize} {...buttoninfo} />
       ))}
