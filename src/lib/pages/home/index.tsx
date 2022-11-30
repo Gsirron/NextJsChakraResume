@@ -10,6 +10,7 @@ import {
   IconButton,
   createIcon,
   Image,
+  Center,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
@@ -62,15 +63,17 @@ const Home = () => {
                   zIndex: -1,
                 }}
               >
-                {Name}
+                {`${Name},`}
               </Text>
               <br />
-              <Text color={textColor}>{`And I'm a \n
+
+              <Text color={textColor}>{`I'm a \n
               ${Occupation}`}</Text>
             </Heading>
             <Text color="gray.300" fontSize={["md", "lg", "xl"]}>
               {Bio}
             </Text>
+
             <Stack
               spacing={{ base: "1em", sm: "1.5em" }}
               direction={{ base: "column", sm: "row" }}
@@ -92,14 +95,14 @@ const Home = () => {
               </Button>
             </Stack>
           </Stack>
-          <Flex
+          {/* <Flex
             flex={1}
             justify="center"
             align="center"
             position="relative"
             w="full"
           >
-            {/* <Blob
+            <Blob
               w={"150%"}
               h={"150%"}
               position={"absolute"}
@@ -107,7 +110,7 @@ const Home = () => {
               left={0}
               zIndex={-1}
               color={useColorModeValue("red.50", "red.400")}
-            /> */}
+            />
             <Box
               position="relative"
               height="300px"
@@ -137,7 +140,7 @@ const Home = () => {
                 src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               />
             </Box>
-          </Flex>
+          </Flex> */}
         </Stack>
       </Container>
     </Stack>
