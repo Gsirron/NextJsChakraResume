@@ -13,9 +13,9 @@ import {
   Center,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
+import { FaDownload } from "react-icons/fa";
 
-import resumeData from "../../../data/ResumeData";
-
+import ResumeData from "@/data/ResumeData";
 import SocialMedia from "@/lib/components/social/SocialMedia";
 
 // import CTASection from "lib/components/samples/CTASection";
@@ -23,7 +23,7 @@ import SocialMedia from "@/lib/components/social/SocialMedia";
 // import SomeText from "lib/components/samples/SomeText";
 
 const Home = () => {
-  const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = resumeData.home;
+  const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
   const textColor = "blue.600";
   return (
     <Stack
@@ -81,30 +81,32 @@ const Home = () => {
               // justifyItems={"center"}
             >
               <SocialMedia BtnSize={"2em"} />
-              <a href={ResumeLink}>
-                <Button
-                  // maxW={"20rem"}
-                  rounded="full"
-                  size="lg"
-                  fontWeight="normal"
-                  px="3em"
-                  colorScheme="red"
-                  bg="blue.600"
-                  _hover={{ bg: "blue.500" }}
-                >
-                  Resume
-                </Button>
-              </a>
+              <Button
+                as="a"
+                href={ResumeLink}
+                target="_blank"
+                // maxW={"20rem"}
+                rounded="full"
+                size="lg"
+                fontWeight="normal"
+                px="3em"
+                colorScheme="blue"
+                bg="blue.600"
+                _hover={{ bg: "blue.500" }}
+                leftIcon={<FaDownload />}
+              >
+                Resume
+              </Button>
             </Stack>
           </Stack>
-          {/* <Flex
+          <Flex
             flex={1}
             justify="center"
             align="center"
             position="relative"
             w="full"
           >
-            <Blob
+            {/* <Blob
               w={"150%"}
               h={"150%"}
               position={"absolute"}
@@ -112,7 +114,7 @@ const Home = () => {
               left={0}
               zIndex={-1}
               color={useColorModeValue("red.50", "red.400")}
-            />
+            /> */}
             <Box
               position="relative"
               height="300px"
@@ -142,7 +144,7 @@ const Home = () => {
                 src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80"
               />
             </Box>
-          </Flex> */}
+          </Flex>
         </Stack>
       </Container>
     </Stack>
