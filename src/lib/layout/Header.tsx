@@ -7,12 +7,19 @@ import {
   IconButton,
   useDisclosure,
   Container,
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
 
 import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const NavBarLinks = [
-  { name: "Work", link: "work" },
+  { name: "Projects", link: "projects" },
   { name: "About", link: "about" },
   { name: "Contact", link: "contact" },
 ];
@@ -21,20 +28,14 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
-      h="5em"
+      h={"5em"}
       width="full"
       bgGradient="radial( blue.800,gray.700)"
       py={[0, 0, 0]}
       px={["1em", "2em"]}
       justifyContent="center"
     >
-      <Flex
-        py="1em"
-        as={Container}
-        justifyContent="space-between"
-        // bgGradient="linear(to-r, blue.800, gray.800,blue.900)"
-        maxW="7xl"
-      >
+      <Flex py="1em" as={Container} justifyContent="space-between" maxW="6xl">
         <Box justifyContent="center" pb="1em">
           <IconButton
             variant="outline"
@@ -46,7 +47,7 @@ const Header = () => {
         </Box>
 
         <IconButton variant="link" aria-label="home" icon={<HamburgerIcon />} />
-        <HStack justifyContent={"space-between"}>
+        <HStack justifyContent="space-between">
           <HStack spacing="1em" display={{ base: "none", md: "flex" }} pr="1em">
             {NavBarLinks.map((linkItem) => (
               <Link key={linkItem.name} href={linkItem.link}>
@@ -54,7 +55,7 @@ const Header = () => {
               </Link>
             ))}
           </HStack>
-          <SocialMedia BtnSize={"1.5em"} />
+          <SocialMedia BtnSize={"30px"} />
         </HStack>
       </Flex>
     </Box>

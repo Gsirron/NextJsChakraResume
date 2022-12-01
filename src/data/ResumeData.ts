@@ -10,6 +10,8 @@ const ResumeData = {
       "I'm a innately curious person, with strong problem solving skills. I love to learn and get underneath to understand how things function. Love everything technology and science ",
     ],
     ProfilePicture: "",
+    ResumeLink:
+      "https://docs.google.com/document/d/1SgUUYrKJpsKf50cU0EkcNHrnKeAiGS0pZHuOeqlFdBM/edit?usp=share_link",
   },
   social: [
     {
@@ -17,6 +19,7 @@ const ResumeData = {
       label: "Email",
       icon: MdEmail,
     },
+
     {
       href: "https://github.com/Gsirron",
       label: "github",
