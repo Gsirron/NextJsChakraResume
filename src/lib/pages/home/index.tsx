@@ -23,7 +23,7 @@ import SocialMedia from "@/lib/components/social/SocialMedia";
 // import SomeText from "lib/components/samples/SomeText";
 
 const Home = () => {
-  const { Name, Occupation, Bio, ProfilePicture } = resumeData.home;
+  const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = resumeData.home;
   const textColor = "blue.600";
   return (
     <Stack
@@ -81,18 +81,20 @@ const Home = () => {
               // justifyItems={"center"}
             >
               <SocialMedia BtnSize={"2em"} />
-              <Button
-                // maxW={"20rem"}
-                rounded="full"
-                size="lg"
-                fontWeight="normal"
-                px="3em"
-                colorScheme="red"
-                bg="blue.600"
-                _hover={{ bg: "blue.500" }}
-              >
-                Resume
-              </Button>
+              <a href={ResumeLink}>
+                <Button
+                  // maxW={"20rem"}
+                  rounded="full"
+                  size="lg"
+                  fontWeight="normal"
+                  px="3em"
+                  colorScheme="red"
+                  bg="blue.600"
+                  _hover={{ bg: "blue.500" }}
+                >
+                  Resume
+                </Button>
+              </a>
             </Stack>
           </Stack>
           {/* <Flex
