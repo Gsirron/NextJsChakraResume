@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 import ConfettiBg from "./backgrounds/ConfettiBg";
 import Footer from "./Footer";
-import Header from "./Header";
+import Header from "./header";
 
 type LayoutProps = {
   children: ReactNode;
@@ -21,6 +21,7 @@ const Layout = ({ children }: LayoutProps) => {
     >
       <Header />
       <Box
+        zIndex={-1}
         as={Container}
         w={"full"}
         maxW={"6xl"}

@@ -7,7 +7,7 @@ type AboutProps = {
 
 const About = (props: AboutProps) => {
   return (
-    <Flex minH={"70vh"} zIndex={-1} bg={"white"} w={"full"}>
+    <Flex minH={"70vh"} zIndex={5} bg={"white"} w={"full"}>
       <Center>
         <Heading>About Page</Heading>
       </Center>

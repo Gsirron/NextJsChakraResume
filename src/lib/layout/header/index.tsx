@@ -17,7 +17,7 @@ import {
 } from "@chakra-ui/react";
 
 import SocialMedia from "@/lib/components/social/SocialMedia";
-import Navlink from "@/lib/layout/NavLink";
+import Navlink from "./NavLink";
 
 const NavBarLinks = [
   { name: "About", link: "about" },
@@ -52,11 +52,11 @@ const Header = () => {
           />
         </Box>
 
-        <IconButton
+        {/* <IconButton
           variant={"link"}
           aria-label={"home"}
           icon={<HamburgerIcon />}
-        />
+        /> */}
         <HStack justifyContent={"space-between"}>
           <HStack
             spacing={"1em"}
