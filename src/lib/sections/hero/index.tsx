@@ -26,7 +26,7 @@ const Hero = () => {
   const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
   const textColor = "blue.600";
   return (
-    <Stack direction={["column", "row"]} spacing={["1em", "2em"]}>
+    <Stack direction={["column", "row"]} spacing={["1em", "2em"]} py={"1em"}>
       <NextSeo title={"Home"} />
       <Stack
         align={"center"}
