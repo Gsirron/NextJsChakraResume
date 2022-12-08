@@ -17,10 +17,11 @@ import {
 } from "@chakra-ui/react";
 
 import SocialMedia from "@/lib/components/social/SocialMedia";
+import Navlink from "@/lib/layout/NavLink";
 
 const NavBarLinks = [
-  { name: "Projects", link: "projects" },
   { name: "About", link: "about" },
+  { name: "Projects", link: "projects" },
   { name: "Contact", link: "contact" },
 ];
 
@@ -63,9 +64,7 @@ const Header = () => {
             pr={"1em"}
           >
             {NavBarLinks.map((linkItem) => (
-              <Link key={linkItem.name} href={linkItem.link}>
-                {linkItem.name}
-              </Link>
+              <Navlink key={linkItem.name}>{linkItem.name}</Navlink>
             ))}
           </HStack>
           <SocialMedia BtnSize={"30px"} />
