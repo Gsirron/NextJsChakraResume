@@ -16,18 +16,18 @@ const Layout = ({ children }: LayoutProps) => {
     <Box
       //
       bg={useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK)}
-      margin="0 auto"
-      transition="0.5s ease-out"
+      margin={"0 auto"}
+      transition={"0.5s ease-out"}
     >
       <Header />
       <Box
         as={Container}
-        w="full"
-        maxW="6xl"
-        alignItems="center"
-        justifyContent="center"
+        w={"full"}
+        maxW={"6xl"}
+        alignItems={"center"}
+        justifyContent={"center"}
       >
-        <Box as="main" marginY={22}>
+        <Box as={"main"} marginY={22}>
           {children}
         </Box>
         <Footer />

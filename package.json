@@ -28,12 +28,14 @@
     "next-seo": "^5.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "react-scroll": "^1.8.8"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.1.0",
     "@commitlint/cz-commitlint": "^17.1.2",
     "@types/react": "^18.0.21",
+    "@types/react-scroll": "^1.8.5",
     "commitizen": "^4.2.5",
     "commitlint": "^17.1.2",
     "cross-env": "^7.0.3",
