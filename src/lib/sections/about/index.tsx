@@ -1,4 +1,4 @@
-import { Box, Center, Flex, Heading } from "@chakra-ui/react";
+import { Box, Center, Flex, Heading, VStack } from "@chakra-ui/react";
 import React from "react";
 
 type AboutProps = {
@@ -12,11 +12,14 @@ const About = (props: AboutProps) => {
       zIndex={5}
       bg={"white"}
       w={"full"}
+      maxW={"6xl"}
       bgImage={"/backgrounds/neuralwhite.svg"}
+      p={"1em"}
     >
-      <Center>
-        <Heading>About Page</Heading>
-      </Center>
+      <VStack>
+        <Heading color={"black"}>About </Heading>
+        <Heading color={"black"}>Norris Luong</Heading>
+      </VStack>
     </Flex>
   );
 };
