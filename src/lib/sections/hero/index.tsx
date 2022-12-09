@@ -23,7 +23,7 @@ import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const Hero = () => {
   const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
-  const textColor = "blue.600";
+  const textColor = "blue.500";
   return (
     <Container maxWidth={"6xl"} centerContent>
       <NextSeo title={"Home"} />
@@ -39,7 +39,7 @@ const Hero = () => {
             fontWeight={600}
             fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
           >
-            <Text as={"span"} color={textColor}>
+            <Text color={textColor}>
               {`I'm `}
               <Text
                 as={"span"}
@@ -63,7 +63,7 @@ const Hero = () => {
             {/* <Text color={textColor}>{`I'm a \n
               ${Occupation}`}</Text> */}
           </Heading>
-          <Text color={"gray.300"} fontSize={["md", "lg", "xl"]} maxW={"3xl"}>
+          <Text color={"gray.200"} fontSize={["md", "lg", "xl"]} maxW={"3xl"}>
             {Bio}
           </Text>
 
