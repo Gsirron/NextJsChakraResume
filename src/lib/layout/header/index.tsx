@@ -10,7 +10,6 @@ import {
 
 import Navlink from "./NavLink";
 import DrawerMenu from "./DrawerMenu";
-import ThemeToggle from "../ThemeToggle";
 import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const NavBarLinks = [
