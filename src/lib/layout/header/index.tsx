@@ -10,10 +10,11 @@ import {
 
 import Navlink from "./NavLink";
 import DrawerMenu from "./DrawerMenu";
-
+import ThemeToggle from "../ThemeToggle";
 import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const NavBarLinks = [
+  { name: "Home", link: "hero" },
   { name: "About", link: "about" },
   { name: "Projects", link: "projects" },
   { name: "Contact", link: "contact" },
@@ -45,7 +46,7 @@ const Header = () => {
             onClick={isOpen ? onClose : onOpen}
           />
         </Box>
-
+        {/* <ThemeToggle /> */}
         {/* <IconButton
           variant={"link"}
           aria-label={"home"}

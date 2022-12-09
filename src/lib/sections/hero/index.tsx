@@ -25,23 +25,25 @@ const Hero = () => {
   const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
   const textColor = "blue.600";
   return (
-    <Container maxWidth={"6xl"}>
+    <Container maxWidth={"6xl"} centerContent>
       <NextSeo title={"Home"} />
-      <Stack direction={["column", "row"]} spacing={["1em", "2em"]} py={"1em"}>
-        <Stack
-          align={"center"}
-          spacing={["1em", "2em", "3em"]}
-          py={["1em", "2em", "3em"]}
-          direction={{ base: "column", md: "row" }}
-        >
-          <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={"center"}>
-            <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
-            >
+      <Stack
+        align={"center"}
+        spacing={["1em", "2em", "3em"]}
+        py={["1em", "2em", "3em"]}
+        direction={{ base: "column", md: "row" }}
+      >
+        <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={"center"}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
+          >
+            <Text as={"span"} color={textColor}>
+              {`I'm `}
               <Text
                 as={"span"}
+                color={"white"}
                 position={"relative"}
                 _after={{
                   content: "''",
@@ -54,43 +56,43 @@ const Hero = () => {
                   zIndex: -1,
                 }}
               >
-                {`I'm ${Name},`}
+                {Name}
               </Text>
-              <br />
-
-              <Text color={textColor}>{`I'm a \n
-              ${Occupation}`}</Text>
-            </Heading>
-            <Text color={"gray.300"} fontSize={["md", "lg", "xl"]}>
-              {Bio}
             </Text>
 
-            <Stack
-              spacing={{ base: "1em", sm: "1.5em" }}
-              direction={{ base: "column", sm: "row" }}
-              justifyContent={"center"}
-              // justifyItems={"center"}
+            {/* <Text color={textColor}>{`I'm a \n
+              ${Occupation}`}</Text> */}
+          </Heading>
+          <Text color={"gray.300"} fontSize={["md", "lg", "xl"]} maxW={"3xl"}>
+            {Bio}
+          </Text>
+
+          <Stack
+            spacing={{ base: "1em", sm: "1.5em" }}
+            direction={{ base: "column", sm: "row" }}
+            justifyContent={"center"}
+            // justifyItems={"center"}
+          >
+            <SocialMedia BtnSize={"2em"} />
+            <Button
+              as={"a"}
+              href={ResumeLink}
+              target={"_blank"}
+              // maxW={"20rem"}
+              rounded={"full"}
+              size={"lg"}
+              fontWeight={"normal"}
+              px={"3em"}
+              colorScheme={"blue"}
+              bg={"blue.600"}
+              _hover={{ bg: "blue.500" }}
+              leftIcon={<FaDownload />}
             >
-              <SocialMedia BtnSize={"2em"} />
-              <Button
-                as={"a"}
-                href={ResumeLink}
-                target={"_blank"}
-                // maxW={"20rem"}
-                rounded={"full"}
-                size={"lg"}
-                fontWeight={"normal"}
-                px={"3em"}
-                colorScheme={"blue"}
-                bg={"blue.600"}
-                _hover={{ bg: "blue.500" }}
-                leftIcon={<FaDownload />}
-              >
-                Resume
-              </Button>
-            </Stack>
+              Resume
+            </Button>
           </Stack>
-          {/* <Flex
+        </Stack>
+        {/* <Flex
             flex={1}
             justify={"center"}
             align={"center"}
@@ -138,7 +140,6 @@ const Hero = () => {
               />
             </Box>
           </Flex> */}
-        </Stack>
       </Stack>
     </Container>
   );
