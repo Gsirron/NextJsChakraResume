@@ -6,12 +6,11 @@ type AboutProps = {
 };
 
 const About = (props: AboutProps) => {
-  const { AboutInfo } = props;
   return (
-    <Flex>
-      <Box>
+    <Flex minH={"70vh"} zIndex={5} bg={"white"} w={"full"}>
+      <Center>
         <Heading>About Page</Heading>
-      </Box>
+      </Center>
     </Flex>
   );
 };

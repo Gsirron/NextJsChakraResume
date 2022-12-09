@@ -2,6 +2,8 @@ import { Box } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { Element } from "react-scroll";
 import Hero from "@/lib/sections/hero";
+import About from "@/lib/sections/about";
+import Projects from "@/lib/sections/projects";
 
 const Home = () => {
   return (
@@ -10,10 +12,10 @@ const Home = () => {
         <Hero />
       </Element>
       <Element id={"About"} name={"About"}>
-        <Hero />
+        <About />
       </Element>
       <Element id={"Projects"} name={"Projects"}>
-        <Hero />
+        <Projects />
       </Element>
     </Box>
   );

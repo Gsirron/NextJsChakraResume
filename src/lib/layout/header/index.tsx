@@ -3,23 +3,18 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
   Container,
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
 } from "@chakra-ui/react";
 
+import Navlink from "./NavLink";
+import DrawerMenu from "./DrawerMenu";
+import ThemeToggle from "../ThemeToggle";
 import SocialMedia from "@/lib/components/social/SocialMedia";
-import Navlink from "@/lib/layout/NavLink";
 
 const NavBarLinks = [
+  { name: "Home", link: "hero" },
   { name: "About", link: "about" },
   { name: "Projects", link: "projects" },
   { name: "Contact", link: "contact" },
@@ -42,7 +37,7 @@ const Header = () => {
         justifyContent={"space-between"}
         maxW={"6xl"}
       >
-        <Box justifyContent={"center"} pb={"1em"}>
+        <Box justifyContent={"center"}>
           <IconButton
             variant={"outline"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={"1.5em"} />}
@@ -51,12 +46,12 @@ const Header = () => {
             onClick={isOpen ? onClose : onOpen}
           />
         </Box>
-
-        <IconButton
+        {/* <ThemeToggle /> */}
+        {/* <IconButton
           variant={"link"}
           aria-label={"home"}
           icon={<HamburgerIcon />}
-        />
+        /> */}
         <HStack justifyContent={"space-between"}>
           <HStack
             spacing={"1em"}
@@ -67,9 +62,11 @@ const Header = () => {
               <Navlink key={linkItem.name}>{linkItem.name}</Navlink>
             ))}
           </HStack>
+
           <SocialMedia BtnSize={"30px"} />
         </HStack>
       </Flex>
+      <DrawerMenu links={NavBarLinks} onClose={onClose} isOpen={isOpen} />
     </Box>
   );
 };
