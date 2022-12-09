@@ -3,21 +3,15 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
   Container,
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
 } from "@chakra-ui/react";
 
-import SocialMedia from "@/lib/components/social/SocialMedia";
 import Navlink from "./NavLink";
+import DrawerMenu from "./DrawerMenu";
+
+import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const NavBarLinks = [
   { name: "About", link: "about" },
@@ -42,7 +36,7 @@ const Header = () => {
         justifyContent={"space-between"}
         maxW={"6xl"}
       >
-        <Box justifyContent={"center"} pb={"1em"}>
+        <Box justifyContent={"center"}>
           <IconButton
             variant={"outline"}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={"1.5em"} />}
@@ -67,9 +61,11 @@ const Header = () => {
               <Navlink key={linkItem.name}>{linkItem.name}</Navlink>
             ))}
           </HStack>
+
           <SocialMedia BtnSize={"30px"} />
         </HStack>
       </Flex>
+      <DrawerMenu links={NavBarLinks} onClose={onClose} isOpen={isOpen} />
     </Box>
   );
 };

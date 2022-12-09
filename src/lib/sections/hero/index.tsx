@@ -26,21 +26,20 @@ const Hero = () => {
   const textColor = "blue.600";
   return (
     <Container maxWidth={"6xl"}>
+      <NextSeo title={"Home"} />
       <Stack direction={["column", "row"]} spacing={["1em", "2em"]} py={"1em"}>
-        <NextSeo title={"Home"} />
         <Stack
           align={"center"}
           spacing={["1em", "2em", "3em"]}
           py={["1em", "2em", "3em"]}
           direction={{ base: "column", md: "row" }}
         >
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={"center"}>
             <Heading
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
             >
-              <Text color={textColor}>{`Hi I'm`}</Text>
               <Text
                 as={"span"}
                 position={"relative"}
@@ -55,7 +54,7 @@ const Hero = () => {
                   zIndex: -1,
                 }}
               >
-                {`${Name},`}
+                {`I'm ${Name},`}
               </Text>
               <br />
 
@@ -91,14 +90,14 @@ const Hero = () => {
               </Button>
             </Stack>
           </Stack>
-          <Flex
+          {/* <Flex
             flex={1}
             justify={"center"}
             align={"center"}
             position={"relative"}
             w={"full"}
           >
-            {/* <Blob
+            <Blob
               w={"150%"}
               h={"150%"}
               position={"absolute"}
@@ -106,7 +105,7 @@ const Hero = () => {
               left={0}
               zIndex={-1}
               color={useColorModeValue("red.50", "red.400")}
-            /> */}
+            />
             <Box
               position={"relative"}
               height={"300px"}
@@ -138,7 +137,7 @@ const Hero = () => {
                 }
               />
             </Box>
-          </Flex>
+          </Flex> */}
         </Stack>
       </Stack>
     </Container>
