@@ -6,6 +6,7 @@ import {
   IconButton,
   useDisclosure,
   Container,
+  Text,
 } from "@chakra-ui/react";
 
 import Navlink from "./NavLink";
@@ -25,7 +26,7 @@ const Header = () => {
     <Box
       h={"5em"}
       width={"full"}
-      bgGradient={"radial( blue.800,gray.700)"}
+      // bgGradient={"radial( blue.800,gray.700)"}
       py={[0, 0, 0]}
       px={["1em", "2em"]}
       justifyContent={"center"}
@@ -36,14 +37,8 @@ const Header = () => {
         justifyContent={"space-between"}
         maxW={"6xl"}
       >
-        <Box justifyContent={"center"}>
-          <IconButton
-            variant={"outline"}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={"1.5em"} />}
-            aria-label={"Open Menu"}
-            display={{ md: "none" }}
-            onClick={isOpen ? onClose : onOpen}
-          />
+        <Box justifyContent={"center"} pt={"0.5em"}>
+          <Text>Norris Luong</Text>
         </Box>
         {/* <ThemeToggle /> */}
         {/* <IconButton
@@ -51,9 +46,19 @@ const Header = () => {
           aria-label={"home"}
           icon={<HamburgerIcon />}
         /> */}
+
         <HStack justifyContent={"space-between"}>
+          <Box justifyContent={"center"}>
+            <IconButton
+              variant={"ghost"}
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon boxSize={"2em"} />}
+              aria-label={"Open Menu"}
+              display={{ md: "none" }}
+              onClick={isOpen ? onClose : onOpen}
+            />
+          </Box>
           <HStack
-            spacing={"1em"}
+            spacing={["0.5em", "1em"]}
             display={{ base: "none", md: "flex" }}
             pr={"1em"}
           >
@@ -62,7 +67,7 @@ const Header = () => {
             ))}
           </HStack>
 
-          <SocialMedia BtnSize={"30px"} />
+          <SocialMedia BtnSize={"25px"} />
         </HStack>
       </Flex>
       <DrawerMenu links={NavBarLinks} onClose={onClose} isOpen={isOpen} />
