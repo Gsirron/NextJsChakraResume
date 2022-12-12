@@ -18,9 +18,9 @@ const SocialButton = (props: TSocialButton) => {
       <a className="btnlink" target="_blank">
         <IconButton
           aria-label={label}
+          w="1em"
           variant="ghost"
-          w="1px"
-          size={["lg", "lg"]}
+          size={["sm", "lg"]}
           icon={TempIcon}
           _hover={{
             bg: "blue.500",
