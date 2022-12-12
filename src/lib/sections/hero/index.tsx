@@ -9,6 +9,7 @@ import {
   Container,
   Image,
   Center,
+  VStack,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import React from "react";
@@ -25,7 +26,7 @@ const Hero = () => {
   const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
   const textColor = "blue.600";
   return (
-    <Container maxWidth={"6xl"} centerContent>
+    <Container maxWidth={"6xl"} centerContent minH={"70vh"}>
       <NextSeo title={"Home"} />
       <Stack
         align={"center"}
@@ -41,6 +42,7 @@ const Hero = () => {
           >
             <Text color={textColor}>
               {`I'm `}
+
               <Text
                 as={"span"}
                 color={"white"}
@@ -58,7 +60,9 @@ const Hero = () => {
               >
                 {Name}
               </Text>
+              {` and I'm a`}
             </Text>
+            <Text>{`${Occupation}`}</Text>
 
             {/* <Text color={textColor}>{`I'm a \n
               ${Occupation}`}</Text> */}
