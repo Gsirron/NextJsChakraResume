@@ -24,10 +24,12 @@ const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box
+      as={Container}
+      centerContent
+      bg={"gray.800"}
       h={"5em"}
-      width={"full"}
+      maxW={"6xl"}
       // bgGradient={"radial( blue.800,gray.700)"}
-      py={[0, 0, 0]}
       px={["1em", "2em"]}
       justifyContent={"center"}
     >
@@ -40,12 +42,6 @@ const Header = () => {
         <Box justifyContent={"center"} pt={"0.5em"}>
           <Text>Norris Luong</Text>
         </Box>
-        {/* <ThemeToggle /> */}
-        {/* <IconButton
-          variant={"link"}
-          aria-label={"home"}
-          icon={<HamburgerIcon />}
-        /> */}
 
         <HStack justifyContent={"space-between"}>
           <Box justifyContent={"center"}>
@@ -67,7 +63,7 @@ const Header = () => {
             ))}
           </HStack>
 
-          <SocialMedia BtnSize={"25px"} />
+          <SocialMedia Display={["none", "flex"]} BtnSize={"25px"} />
         </HStack>
       </Flex>
       <DrawerMenu links={NavBarLinks} onClose={onClose} isOpen={isOpen} />
