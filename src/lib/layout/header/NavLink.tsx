@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import * as Scroll from "react-scroll";
-import { Link, useColorModeValue } from "@chakra-ui/react";
+import { Link } from "@chakra-ui/react";
 // import Link from "next/link";
 const Link2 = Scroll.Link;
 
