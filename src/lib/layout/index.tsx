@@ -5,9 +5,9 @@ import ConfettiBg from "./backgrounds/ConfettiBg";
 import Footer from "./Footer";
 import Header from "./header";
 
-type LayoutProps = {
+interface SectionProps {
   children: ReactNode;
-};
+}
 
 const Layout = ({ children }: LayoutProps) => {
   const { CONFETTI_LIGHT, CONFETTI_DARK } = ConfettiBg;

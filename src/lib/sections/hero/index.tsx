@@ -14,33 +14,25 @@ import {
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { FaDownload } from "react-icons/fa";
-import ConfettiBg from "@/lib/layout/backgrounds/ConfettiBg";
+
+import Section from "@/lib/layout/sectionlayout/Section";
 import ResumeData from "@/data/ResumeData";
 import SocialMedia from "@/lib/components/social/SocialMedia";
+import ConfettiBg from "@/lib/layout/backgrounds/ConfettiBg";
 // import CTASection from "lib/components/samples/CTASection";
 // import SomeImage from "lib/components/samples/SomeImage";
 // import SomeText from "lib/components/samples/SomeText";
 
 const Hero = () => {
   const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
-  const { CONFETTI_LIGHT, CONFETTI_DARK } = ConfettiBg;
+  const { CONFETTI_DARK } = ConfettiBg;
   const textColor = "blue.600";
   return (
-    <Box
-      as={Container}
-      maxWidth={"6xl"}
-      centerContent
-      minH={"70vh"}
-      bg={"gray.800"}
-      bgImage={CONFETTI_DARK}
-      roundedBottomLeft={"150px"}
-      zIndex={1}
-    >
+    <Section background={"gray.800"}>
       <NextSeo title={"Home"} />
       <Stack
         align={"center"}
         spacing={["1em", "2em", "3em"]}
-        py={["1em", "2em", "3em"]}
         zIndex={2}
         direction={{ base: "column", md: "row" }}
       >
@@ -145,7 +137,7 @@ const Hero = () => {
           </Box>
         </Flex> */}
       </Stack>
-    </Box>
+    </Section>
   );
 };
 
