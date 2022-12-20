@@ -6,7 +6,12 @@ type ProjectsProps = {};
 
 const Projects = (props: ProjectsProps) => {
   return (
-    <Section background={"gray.800"} centerContent roundedTopRight={"150px"}>
+    <Section
+      background={"gray.800"}
+      centerContent
+      roundedTopRight={"100px"}
+      roundedBottomLeft={"100px"}
+    >
       <Stack>
         <Heading>Projects</Heading>
       </Stack>

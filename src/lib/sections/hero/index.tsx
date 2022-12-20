@@ -28,7 +28,11 @@ const Hero = () => {
   const { CONFETTI_DARK } = ConfettiBg;
   const textColor = "blue.600";
   return (
-    <Section background={"gray.800"}>
+    <Section
+      background={"gray.800"}
+      bgAttachment={"fixed"}
+      bgImage={CONFETTI_DARK}
+    >
       <NextSeo title={"Home"} />
       <Stack
         align={"center"}
