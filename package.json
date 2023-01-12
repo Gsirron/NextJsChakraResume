@@ -1,7 +1,6 @@
 {
   "name": "nextarter-chakra",
   "version": "0.1.0",
-  "private": false,
   "author": "sozonome",
   "scripts": {
     "dev": "next dev",
