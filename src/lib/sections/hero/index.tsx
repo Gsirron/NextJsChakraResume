@@ -3,34 +3,41 @@ import {
   Stack,
   Heading,
   Text,
+  useColorModeValue,
   Button,
   Box,
   IconButton,
   Container,
   Image,
   Center,
+  VStack,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import React from "react";
 import { FaDownload } from "react-icons/fa";
 
+import Section from "@/lib/layout/sectionlayout/Section";
 import ResumeData from "@/data/ResumeData";
 import SocialMedia from "@/lib/components/social/SocialMedia";
-
+import ConfettiBg from "@/lib/layout/backgrounds/ConfettiBg";
 // import CTASection from "lib/components/samples/CTASection";
 // import SomeImage from "lib/components/samples/SomeImage";
 // import SomeText from "lib/components/samples/SomeText";
 
 const Hero = () => {
   const { Name, Occupation, Bio, ResumeLink, ProfilePicture } = ResumeData.home;
+  const { CONFETTI_DARK } = ConfettiBg;
   const textColor = "blue.600";
   return (
-    <Container maxWidth={"6xl"} centerContent>
+    <Section
+      background={"gray.800"}
+      bgAttachment={"fixed"}
+      bgImage={CONFETTI_DARK}
+    >
       <NextSeo title={"Home"} />
       <Stack
         align={"center"}
         spacing={["1em", "2em", "3em"]}
-        py={["1em", "2em", "3em"]}
+        zIndex={2}
         direction={{ base: "column", md: "row" }}
       >
         <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={"center"}>
@@ -40,7 +47,7 @@ const Hero = () => {
             fontSize={{ base: "4xl", md: "5xl", lg: "6xl" }}
           >
             <Text color={textColor}>
-              {`I'm `}
+              {`I'm `} <br />
               <Text
                 as={"span"}
                 color={"white"}
@@ -52,13 +59,17 @@ const Hero = () => {
                   position: "absolute",
                   bottom: 1,
                   left: 0,
-                  bg: "blue.800",
+                  bg: "blue.600",
                   zIndex: -1,
                 }}
               >
                 {Name}
+                <br />
               </Text>
+              {`And I'm a`}
+              <br />
             </Text>
+            <Text>{`${Occupation}`}</Text>
 
             {/* <Text color={textColor}>{`I'm a \n
               ${Occupation}`}</Text> */}
@@ -78,13 +89,11 @@ const Hero = () => {
               as={"a"}
               href={ResumeLink}
               target={"_blank"}
-              // maxW={"20rem"}
               rounded={"full"}
               size={"lg"}
               fontWeight={"normal"}
-              px={"3em"}
-              colorScheme={"blue"}
-              bg={"blue.600"}
+              colorScheme={"gray"}
+              bg={"blue.700"}
               _hover={{ bg: "blue.500" }}
               leftIcon={<FaDownload />}
             >
@@ -132,7 +141,7 @@ const Hero = () => {
           </Box>
         </Flex> */}
       </Stack>
-    </Container>
+    </Section>
   );
 };
 
