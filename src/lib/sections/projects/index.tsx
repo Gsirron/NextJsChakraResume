@@ -4,9 +4,22 @@ import ProjectItem from "./ProjectItem";
 
 import Section from "@/lib/layout/sectionlayout/Section";
 
-type ProjectsProps = {};
+const ProjectArray = [
+  {
+    ProjectHeading: "Project 1",
+    ProjectDescription: "Test description of project",
+  },
+  {
+    ProjectHeading: "Project 2",
+    ProjectDescription: "Test description of project",
+  },
+  {
+    ProjectHeading: "Project 3",
+    ProjectDescription: "Test description of project",
+  },
+];
 
-const Projects = (props: ProjectsProps) => {
+const Projects = () => {
   return (
     <Section
       background={"gray.300"}
@@ -15,19 +28,14 @@ const Projects = (props: ProjectsProps) => {
       roundedBottomLeft={"100px"}
     >
       <Heading color={"black"}>Projects</Heading>
-      <Flex justifyContent={"space-between"} w="100%" h="100%">
-        <ProjectItem
-          ProjectHeading={"test heading"}
-          ProjectDescription={"random diescription"}
-        />
-        <ProjectItem
-          ProjectHeading={"test heading"}
-          ProjectDescription={"random diescription"}
-        />
-        <ProjectItem
-          ProjectHeading={"test heading"}
-          ProjectDescription={"random diescription"}
-        />
+      <Flex justifyContent={"space-between"} w="100%">
+        {ProjectArray.map((projectItem) => (
+          <ProjectItem
+            key={projectItem.ProjectHeading}
+            ProjectHeading={projectItem.ProjectHeading}
+            ProjectDescription={projectItem.ProjectDescription}
+          />
+        ))}
       </Flex>
     </Section>
   );

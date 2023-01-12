@@ -11,16 +11,18 @@ import {
 interface ProjectItemProps {
   ProjectHeading: string;
   ProjectDescription: string;
+  //   ProjectlinkUrl: string;
+  //   ProjectLiveUrl: string;
 }
 
 const ProjectItem = (props: ProjectItemProps) => {
   const { ProjectHeading, ProjectDescription } = props;
   return (
-    <VStack p={"1em"}>
+    <VStack p={"1em"} px={"2em"} spacing={"2em"}>
       <Image />
       <Heading>{ProjectHeading}</Heading>
       <Text>{ProjectDescription}</Text>
-      <Flex>
+      <Flex justifyContent={"space-between"} w="80%">
         <Button>Link</Button>
         <Button>Live</Button>
       </Flex>
