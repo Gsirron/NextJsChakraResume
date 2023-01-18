@@ -22,16 +22,17 @@ const ProjectArray = [
 const Projects = () => {
   return (
     <Section
-      background={"gray.300"}
+      background={"gray.100"}
       centerContent
       roundedTopRight={"100px"}
       roundedBottomLeft={"100px"}
     >
       <Heading color={"black"}>Projects</Heading>
-      <Flex justifyContent={"space-between"} w="100%">
-        {ProjectArray.map((projectItem) => (
+      <Flex justifyContent={"space-between"} w={"100%"} direction={"column"}>
+        {ProjectArray.map((projectItem, index) => (
           <ProjectItem
             key={projectItem.ProjectHeading}
+            ProjectIndex={index}
             ProjectHeading={projectItem.ProjectHeading}
             ProjectDescription={projectItem.ProjectDescription}
           />

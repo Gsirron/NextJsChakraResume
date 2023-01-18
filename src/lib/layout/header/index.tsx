@@ -9,8 +9,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-import Navlink from "./NavLink";
 import DrawerMenu from "./DrawerMenu";
+import Navlink from "./NavLink";
+
 import SocialMedia from "@/lib/components/social/SocialMedia";
 
 const NavBarLinks = [
