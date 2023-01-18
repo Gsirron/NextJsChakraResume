@@ -8,9 +8,7 @@ import {
 
 import ConfettiBg from "@/lib/layout/backgrounds/ConfettiBg";
 
-type AboutProps = {
-  AboutInfo: string;
-};
+type AboutProps = {};
 
 const About = (props: AboutProps) => {
   const { CONFETTI_LIGHT, CONFETTI_DARK } = ConfettiBg;
